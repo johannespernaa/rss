@@ -1,0 +1,115 @@
+<!Doctype html>
+<!-- Version 1.2 17.4.2021 -->
+<html lang="fi">
+<head>
+	<meta charset="utf-8">
+	<!--Change TITLE from here -->
+	<meta name="Johannes Pernaa" content="RSS">
+	<!-- Important for mobile responsivity -->
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<!-- Just replace this file with your own favicon -->
+	<link rel="shortcut icon" href="favicon.ico"/> 
+	<!-- Visible heading at the top of the page -->
+	<title>RSS</title>
+	<!-- NOTE that jQuery Mobile CSS is included in this file -->
+	<link href="css/rss.css" rel="stylesheet" type="text/css"/>
+	<!-- Files are in /js folder for enabling HTTPS connection -->
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- FeedEk jQuery RSS/ATOM Feed Plugin v3.1.1
+	https://jquery-plugins.net/FeedEk/FeedEk.html
+	https://github.com/enginkizil/FeedEk -->
+	<script src="js/FeedEk.min.js"></script>
+	<script src="js/translate.js"></script>
+	<script src="js/feeds.js"></script>
+	<script src="js/swapfeeds.js"></script>
+</head>
+<body>
+	<!-- Fixed sets visibility on all the time -->
+	<div data-role="header" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+			 <!-- Icon size is 32*20 px -->
+			  <li><a href="javascript:swapFeeds(0)" id="fi" class="translate"><img src="img/fi.png" alt="Finland" class="ui-li-icon"></a></li>
+			  <li><a href="javascript:swapFeeds(1)" id="sv" class="translate"><img src="img/sv.png" alt="Swedish" class="ui-li-icon"></a></li>
+			  <li><a href="javascript:swapFeeds(2)" id="en" class="translate"><img src="img/gb.png" alt="English" class="ui-li-icon"></a></li>
+			</ul>
+		</div>
+		</div>
+	<div id="pagetitle">
+	<h2>JOHANNES PERNAA RSS MASHUP</h2>
+	</div>
+	<div id="firstrow">
+	<h3 class="colored"><span class="ui-bar ui-bar-a lang" key="row1heading">Uusimmat akateemiset</span></h3>
+		<div class="ui-body">
+			<div data-role="tabs">
+				<div data-role="navbar">
+					<ul>
+						<!-- First one is active when page loads -->
+						<li><a href="#one" class="lang ui-btn-active" key="feed1">Julkaisut</a></li>
+						<li><a href="#two" class="lang" key="feed2">Aktiviteetit</a></li>
+						<li><a href="#three" class="lang" key="feed3">Projektit</a></li>
+					</ul>
+				</div> 
+				<div id="one" class="ui-body-d ui-content">
+					<!-- Place the RSS feed -->
+					<div id="feed1fi"></div>
+					<div id="feed1sv" style="display:none"></div>
+					<div id="feed1en" style="display:none"></div>
+				</div>
+				<div id="two">
+					<div id="feed2fi"></div>
+					<div id="feed2sv" style="display:none"></div>
+					<div id="feed2en" style="display:none"></div>
+				</div>
+				<div id="three">
+					<div id="feed3fi"></div>
+					<div id="feed3sv" style="display:none"></div>
+					<div id="feed3en" style="display:none"></div>
+				</div>
+			</div>
+		</div>
+	</div><!-- End of firstrow -->
+	<div id="secondrow">
+	<h3 class="colored"><span class="ui-bar ui-bar-a lang" key="row2heading">Blogitekstejä</span></h3>
+      <div class="ui-body">
+			<div data-role="tabs">
+				<div data-role="navbar">
+					<ul>
+	  				  <!-- First one is active when page loads -->
+					  <li><a href="#one" class="lang ui-btn-active" key="blog1">Suomeksi</a></li>
+					  <li><a href="#two" class="lang" key="blog2">Englanniksi</a></li>
+					</ul>
+				</div>
+				<div id="one" class="ui-body-d ui-content">
+					<div id="blog1"></div>
+				</div>
+				<div id="two">
+					<div id="blog2"></div>
+				</div>
+			</div>
+		</div>
+	</div><!-- End of secondrow -->
+	<h3 class="colored"><span class="ui-bar ui-bar-a lang" key="about">Tiedot</span></h3>
+	<div id="info">
+		<p class="about">
+		RSS MASHUP<br/>
+		V1.0 – 7.4.2020<br/>
+		<span class="lang" key="v1.1">Erilliset js-tiedostot, kielituki syötteille, RSS-muutoksia</span><br/>
+		V1.1 – 14.4.2020<br/>
+		<span class="lang" key="v1.2">Lippujen suurentaminen, CSS-muutoksia</span><br/>
+		V1.2 – 17.4.2021<br/>
+		jQuery & FeedEk: <a href="https://jquery.org/license/" target="_blank">MIT</a><br/>
+		Johannes Pernaa – <a href="https://researchportal.helsinki.fi/en/publications/rss-mashup" target="_blank">TUHAT</a><br/>
+		</p>
+	</div>
+	<!-- Fixed sets visibility on all the time -->
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar" >
+			<ul>
+			  <li><a href="https://johannespernaa.myportfolio.com" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-back lang" key="back">Takaisin</a></li>
+			</ul>
+		</div>
+	</div>
+</body
+</html>
